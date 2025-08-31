@@ -8,7 +8,7 @@ It’s not just a technical exercise, but also a project where I explored how ra
 ## 🏗️ Data Architecture
 
 The architecture follows the **Medallion Approach**: 
-![Data Architecture](docs\diagrams/data_architecture.png)
+![Data Architecture](docs/diagrams/data_architecture.png)
 
 1. **Bronze Layer** – The raw landing zone: data ingested directly from CSV files into SQL Server.  
 2. **Silver Layer** – Data is cleaned, standardized, and transformed into something consistent and reliable.  
