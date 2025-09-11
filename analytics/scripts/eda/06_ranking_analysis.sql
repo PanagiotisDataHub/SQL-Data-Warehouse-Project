@@ -17,7 +17,8 @@ SQL Functions Used:
 SELECT TOP 5
     p.product_name,
     SUM(f.sales_amount) AS total_revenue
-FROM gold.fact_sales f
+FROM 
+    gold.fact_sales f
 LEFT JOIN gold.dim_products p
     ON p.product_key = f.product_key
 GROUP BY p.product_name
@@ -30,7 +31,8 @@ FROM (
         p.product_name,
         SUM(f.sales_amount) AS total_revenue,
         RANK() OVER (ORDER BY SUM(f.sales_amount) DESC) AS rank_products
-    FROM gold.fact_sales f
+    FROM 
+        gold.fact_sales f
     LEFT JOIN gold.dim_products p
         ON p.product_key = f.product_key
     GROUP BY p.product_name
@@ -41,7 +43,8 @@ WHERE rank_products <= 5;
 SELECT TOP 5
     p.product_name,
     SUM(f.sales_amount) AS total_revenue
-FROM gold.fact_sales f
+FROM 
+    gold.fact_sales f
 LEFT JOIN gold.dim_products p
     ON p.product_key = f.product_key
 GROUP BY p.product_name
@@ -53,7 +56,8 @@ SELECT TOP 10
     c.first_name,
     c.last_name,
     SUM(f.sales_amount) AS total_revenue
-FROM gold.fact_sales f
+FROM 
+    gold.fact_sales f
 LEFT JOIN gold.dim_customers c
     ON c.customer_key = f.customer_key
 GROUP BY 
@@ -68,7 +72,8 @@ SELECT TOP 3
     c.first_name,
     c.last_name,
     COUNT(DISTINCT order_number) AS total_orders
-FROM gold.fact_sales f
+FROM 
+    gold.fact_sales f
 LEFT JOIN gold.dim_customers c
     ON c.customer_key = f.customer_key
 GROUP BY 
