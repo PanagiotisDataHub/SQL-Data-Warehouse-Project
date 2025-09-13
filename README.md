@@ -92,3 +92,20 @@ This project is licensed under the [MIT License](LICENSE).
 My name is **Panagiotis Christias**. I see data projects as a mix of logic and creativity – building pipelines and schemas is a bit like composing music: structure, flow, and harmony matter.  
 
 This repository is one example of that approach: starting simple, layering complexity, and ending with something that feels complete.  
+
+---
+
+## 🔮 Future Work
+
+This project is designed to keep evolving. Planned next steps include:
+
+- **Tableau Visualizations**  
+  Build interactive dashboards on top of the reporting views (`gold.report_customers`, `gold.report_products`) and publish them to **Tableau Public**, with screenshots and links added to the repository.
+
+- **Python Extensions**  
+  Add a `python/` folder with scripts and notebooks for:  
+  - ETL automation (loading raw CSV data into SQL Server).  
+  - Advanced analytics and exploratory data analysis with pandas.  
+  - Optional data visualizations to complement the SQL reports.
+
+These additions will extend the project from a SQL-only portfolio piece to a more **end-to-end data engineering workflow**.
