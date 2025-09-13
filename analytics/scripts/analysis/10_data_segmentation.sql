@@ -33,7 +33,7 @@ SELECT
 FROM
     product_segments
 GROUP BY product_cost_range
-ORDER BY total_products DESC
+ORDER BY total_products DESC;
 
 /*Group customers into three segments based on their spending behavior:
 	- VIP: Customers with at least 12 months of history and spending more than €5,000.
@@ -67,4 +67,4 @@ SELECT
 FROM 
     customer_spending )t 
 GROUP BY customer_segment 
-ORDER BY total_customers DESC
+ORDER BY total_customers DESC;
