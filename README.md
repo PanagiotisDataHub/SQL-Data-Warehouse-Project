@@ -42,27 +42,42 @@ At its core, the project shows how unstructured data can evolve into something m
 
 ## 📂 Repository Structure
 ```
-data-warehouse-project/
+SQL-Data-Warehouse-Project/
 │
-├── datasets/ # Source ERP and CRM datasets
+├── datasets/                # Optional raw source data (ERP, CRM)
+│   ├── source_crm/
+│   └── source_erp/
 │
-├── docs/ # Documentation, diagrams, data catalog
-│ ├── data_architecture.drawio
-│ ├── data_flow.drawio
-│ ├── data_models.drawio
-│ ├── data_catalog.md
-│ ├── naming-conventions.md
+├── docs/                    # Documentation and standards
+│   ├── catalog/             # Data catalog (fact/dimension descriptions)
+│   │   └── data_catalog.md
+│   ├── diagrams/            # Architecture, flows, integrations, models
+│   │   ├── data_architecture.png
+│   │   ├── data_flow.png
+│   │   ├── data_integration.png
+│   │   └── data_model.png
+│   └── standards/           # Conventions and best practices
+│       └── naming_conventions.md
 │
-├── scripts/ # SQL scripts for ETL & transformations
-│ ├── bronze/ # Raw ingestion
-│ ├── silver/ # Cleaning & standardization
-│ ├── gold/ # Star schema & reporting models
+├── scripts/                 # SQL scripts for ETL & transformations
+│   ├── bronze/              # Raw ingestion layer
+│   ├── silver/              # Cleaned & standardized layer
+│   ├── gold/                # Star schema, business views
+│   └── init_database.sql    # DB & schema initialization
 │
-├── analytics/ # SQL queries, KPIs, and reporting logic
+├── analytics/               # Analytics and reporting
+│   ├── scripts/
+│   │   ├── eda/             # Exploratory Data Analysis (database, dimensions, measures, ranking, etc.)
+│   │   ├── analysis/        # Deeper analysis (segmentation, cumulative, part-to-whole, etc.)
+│   │   └── reports/         # Business reports (customers, products, KPIs)
+│   └── README.md            # Analytics documentation
 │
-├── tests/ # Validation & quality checks
-├── README.md # Project overview
-└── requirements.txt # Dependencies
+├── tests/                   # Data quality checks
+│   ├── quality_checks_silver.sql
+│   └── quality_checks_gold.sql
+│
+├── LICENSE
+└── README.md                # Project overview
 ```
 ---
 
